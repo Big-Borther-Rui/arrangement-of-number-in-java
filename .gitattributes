@@ -1,17 +1,37 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+package mathtest;
 
-# Custom for Visual Studio
-*.cs     diff=csharp
+import java.util.Scanner;
 
-# Standard to msysgit
-*.doc	 diff=astextplain
-*.DOC	 diff=astextplain
-*.docx diff=astextplain
-*.DOCX diff=astextplain
-*.dot  diff=astextplain
-*.DOT  diff=astextplain
-*.pdf  diff=astextplain
-*.PDF	 diff=astextplain
-*.rtf	 diff=astextplain
-*.RTF	 diff=astextplain
+public class MathText {
+	int a,b,c,d;
+	
+	public int MathText() {
+		Scanner input = new Scanner(System.in);
+		int a = input.nextInt();
+		int b = input.nextInt();
+		int c = input.nextInt();
+		input.close();
+		int d = 0;
+		
+		if(c == 1 ){
+			d = a + b;
+		}
+		
+		if(c == 2 ){
+			d = a - b;
+		}
+		
+		if(c == 3 ){
+			d = a * b;
+		}
+		
+		return d;
+	}
+	
+	public static void main(String [] args){
+		System.out.printf("请输入两个数");
+		MathText result = new MathText ();
+		System.out.println(result);
+		
+	}
+}
